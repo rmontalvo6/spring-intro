@@ -1,0 +1,8 @@
+package com.mitocode;
+
+
+public class SpringBean {
+
+	public SpringBean() {
+	}
+}

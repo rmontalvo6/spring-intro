@@ -1,0 +1,12 @@
+package com.mitocode;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class SpringBean {
+
+	public SpringBean() {
+	private static final Logger logger = LoggerFactory.getLogger(SpringBean.class);
+	}
+	
+}

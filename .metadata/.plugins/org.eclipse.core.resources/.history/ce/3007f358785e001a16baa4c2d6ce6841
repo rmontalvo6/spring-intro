@@ -1,0 +1,13 @@
+package pe.peru;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class SpringBean {
+	
+	private static final Logger log = LoggerFactory.getLogger(SpringBean.class);
+
+	public SpringBean() {
+		log.info("Crea Una Instancia de OTRO BEAN"+this.hashCode());
+	}
+}

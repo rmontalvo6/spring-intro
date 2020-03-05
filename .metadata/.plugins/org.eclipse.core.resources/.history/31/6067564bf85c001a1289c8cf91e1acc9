@@ -1,0 +1,9 @@
+package com.mitocode.springboot;
+
+public class FabricaBeans {
+	
+	
+public Persona obtenerPersona() {
+	
+}
+}

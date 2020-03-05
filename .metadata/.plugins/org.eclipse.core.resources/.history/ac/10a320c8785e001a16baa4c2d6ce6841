@@ -1,0 +1,39 @@
+package com.mitocode;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import pe.peru.OtroSpringBean;
+
+@SpringBootApplication
+public class SpringbootIntroApplication implements CommandLineRunner {
+
+	private static final Logger logger = LoggerFactory.getLogger(SpringbootIntroApplication.class);
+
+	@Autowired // inyectar el spring
+	private SpringBean spring;
+
+	@Qualifier
+	private OtroSpringBean otrospring;
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringbootIntroApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		logger.info("Aplicacion Iniciada");
+		logger.info("Hascode Bean:" + spring.hashCode());
+		SpringBean instancia = new SpringBean();
+		logger.info("Nueva Instancia:" + instancia.hashCode());
+
+		logger.info("OtroSprean" + otrospring.hashCode());
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.mitocode.springboot;
+
+import org.springframework.context.annotation.Bean;
+
+public class FabricaBeans {
+
+	@Bean
+	public Persona obtenerPersona() {
+		return new Persona();
+	}
+}
